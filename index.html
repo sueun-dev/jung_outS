@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Rubic landing page.">
+    <meta name="author" content="Devcrud">
+    <title>valencia</title>
+    <script>
+        const pageName = 'NFT'
+    </script>
+    <link rel="icon" type="image/x-icon" href="./assets/imgs/favicon-96x96.png">
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap + Rubic main styles -->
+	<link rel="stylesheet" href="assets/css/rubic.css">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home" style="background-color: rgb(0, 0, 0);">
+    <nav class="navbar page-navbar navbar-dark navbar-expand-md">
+        <div class="container">
+            <a class="navbar-brand" href="#"><strong class="text-primary" style="font-size: 20px;">LEGUENDARY LEAGUE </strong><span class="text-light" style="font-size: 20px;"> VALENCIA</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+        </div>
+    </nav>
+
+
+    <header class="header d-flex justify-content-center">
+        <div class="container">
+            <div class="row h-100 align-items-center">
+                <div class="col-md-7">
+                    <div class="header-content">
+                        <h3 class="header-title"><strong class="text-primary">MINT YOUR NFT!</strong></h3>
+                        <h4 class="header-subtitle"></h4>
+                        <p>WL Sale Price : 0.1ETH <br>  Public Sale Price : 0.12ETH</p>
+                        <br>
+                        <input type="number" id="number-of-tokens" value="1" style="text-align:center; font-size: 20px; width: 120px; height: 40px; padding-bottom: 8px;"/>  
+                        <button class="btn btn-outline-light btn-flat" onclick="ERC721.mintWithETH()" >Buy NFT</button>   
+                        <br><br>
+                        <input type="number" id="number-of-tokens1" value="1" style="text-align:center; font-size: 20px; width: 120px; height: 40px; padding-bottom: 8px;"/>  
+                        <button class="btn btn-outline-light btn-flat" onclick="ERC721.WLmintWithETH()" >WL Buy NFT</button><br><br>
+                        <div><button class="btn btn-outline-light btn-flat" onclick="App.ConnectId()">Connect Wallet</button></div><br>
+                        <div><button class="btn btn-outline-light btn-flat" onclick="App.CheckId()" class="btn"">Check Your Address</button></div>
+                        <div id="Account" style="color: #ffffff; font-size: 20px;"></div>
+
+                    </div>  
+                </div>
+                <div class="col-md-5 d-md-block">
+
+                        <div class="head" style="color: rgb(43, 255, 0); font-size: 30px;">Minting information</div><br>
+                        <div class="body">
+                            <span id="total-supply" style="color: rgb(43, 255, 0); font-size: 40px;" > </span>         
+                            <span style="color: rgb(43, 255, 0); font-size: 40px;" >&nbsp;/ 8525</span><br><br>
+                            <div style="color: rgb(43, 255, 0); font-size: 30px;"><strong>1 Transaction = 5 NFT</strong></div><br>
+                        </div>
+                        
+                </div>
+            </div>  
+        </div>
+    </header>
+    
+    <section class="header d-flex justify-content-center" style="background-image: url(./assets/imgs/body.jpeg);">
+        <div class="container">
+            <div class="row h-100 align-items-center">
+                <div class="col-md-7">
+                    <div class="header-content">
+                        <h3 class="header-title"><strong class="text-primary">Scroll Down!</strong></h3>
+                    </div>  
+                </div>
+            </div>  
+        </div>
+    </section>
+
+
+    <section class="section" id="about">
+        <div class="container text-center">
+            <h6 class="display-4 has-line" style="color: #ffffff;">This is your NFT!</h6>
+
+            <p class="mb-5 pb-4">If you check nft and add sender address, You can send your nft.</p>
+
+            <div class="row">
+                
+                    <div id ="my-nft-list" class="row row-cols-1 g-4" style=" background-color: #FDF4DF" >
+                        <span style="color: #ffffff;"></span>
+                     </div> 
+
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer py-4 bg-dark text-light">
+        <div class="container text-center">
+            <p class="mb-4 small">Copyright &copy; <a href="http://legendaryleaguenft.com/">LEGUENDARY LEAGUE VALENCIA</a></p>
+            <div class="social-links">
+                <a href="javascript:void(0)" class="link"><i class="ti-facebook"></i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-twitter-alt"></i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-google"></i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-pinterest-alt"></i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-instagram"></i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-rss"></i></a>
+            </div>
+        </div>
+    </footer>
+	
+	<!-- core  -->
+    <script src="./assets/js/abi.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/bignumber.js@9.0.2/bignumber.min.js' integrity="sha256-8hM/h5mrVPZGsV7j7Qmhw4mA17ztgmzcCA092JS4b7o" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/web3@1.6.1/dist/web3.min.js" integrity="sha256-XH+mnS1YTklQJ7VzeLSviplcaKwkRWpwDwHUNXVCuIU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js" integrity="sha256-nWBTbvxhJgjslRyuAKJHK+XcZPlCnmIAAMixz6EefVk=" crossorigin="anonymous"></script>
+
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+    <!-- bootstrap 3 affix -->
+	<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Rubic js -->
+    <script src="assets/js/rubic.js"></script>
+    <script src="./assets/js/app.js"></script>
+
+</body>
+</html>
